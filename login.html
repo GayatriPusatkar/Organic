@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Organic Shop</title>
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: "Playfair Display", serif;
+    }
+
+    .background {
+      background: url('assets/Images/Home/banner-ad-1.jpg') no-repeat center center/cover;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.25);
+      padding: 40px 30px;
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 380px;
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
+
+    h2 {
+      font-size: 50px;
+      margin-bottom: 25px;
+    }
+
+    .emoji {
+      font-size: 38px;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 13px;
+      margin: 10px 0 18px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 15px;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    button {
+      width: 60%;
+      padding: 14px;
+      background-color: #0996ce;
+      border: none;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #1b8bbb;
+      transform: scale(1.02);
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 420px) {
+      .form-container {
+        padding: 30px 20px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      .emoji {
+        font-size: 30px;
+      }
+
+      input, button {
+        font-size: 14px;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="background">
+    <div class="form-container">
+      <h2>Login Here </h2>
+      <form action="login.jsp" method="post">
+  <input type="text" name="username" placeholder="📧 Email or Username" required />
+  <input type="password" name="password" placeholder="🔒 Password" required />
+  <button type="submit">Login</button>
+  <button type="button" onclick="window.location.href='index.html'" style="background-color: gray; margin-top: 15px;">Return to Home</button>
+</form>
+      
+    </div>
+  </div>
+</body>
+</html>

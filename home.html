@@ -1,0 +1,2091 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ecommerce Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+
+
+
+  <!-- Google fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+
+  <!--  -->
+
+  <!-- Aos -->
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!--  -->
+
+  <!-- css -->
+
+  <link rel="stylesheet" href="demo.css">
+  <!--  -->
+
+  <!-- Icon Font Stylesheet -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<style>
+ /* download */
+
+ .organic-app-section {
+  
+  padding: 60px 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 80vh;
+  padding: 20px;
+  background-image: url(bg2.jpg); /* Replace with your image URL */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+
+ 
+}
+
+
+
+ .fourthsection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 80vh;
+  padding: 20px;
+  background-image: url(banner-ad-1.jpg); /* Replace with your image URL */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="container-fluid firstparent">
+    <div class="container-fluid first">
+      <!-- Desktop Navbar -->
+      <nav class="navbar navbar-expand-lg d-lg-block d-none bg-white shadow-sm fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#"><img src="logo (1).svg" alt="Logo"></a>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto gap-4">
+              <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="shop.jsp">Shop</a></li>
+              <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          
+<div class="dropdown position-relative text-center">
+  <i class="fas fa-user fa-lg fs-2" id="userDropdownToggle" style="cursor: pointer;"></i>
+
+  <!-- Hint text below icon -->
+  <div id="clickHint" class="  mt-1" style="font-size: 0.8rem;">
+    👆 Click above  😊
+  </div>
+
+  <ul class="dropdown-menu show-on-click" id="userDropdownMenu" style="display:none; position:absolute; top: 60px; left: 50%; transform: translateX(-50%); background:white; border:1px solid #ccc; border-radius:8px; min-width:160px; z-index:1000;">
+    <li><span id="user-name" class="dropdown-item text-primary fw-bold text-center"></span></li>
+    <li><a class="dropdown-item" href="profile.jsp"><i class="fa-solid fa-user me-2"></i>Go to Profile</a></li>
+    <li><a class="dropdown-item" href="cart.html"><i class="fa-solid fa-cart-shopping me-2"></i>Go to Cart</a></li>
+    <li><a class="dropdown-item text-danger" href="#" id="logout-btn"><i class="fa-solid fa-right-from-bracket me-2"></i>Logout</a></li>
+  </ul>
+</div>
+
+
+
+          
+        </div>
+      </nav>
+
+      <!-- Mobile Navbar -->
+      <nav class="navbar mobile-navbar fixed-top d-lg-none d-block bg-white shadow-sm">
+        <div class="container">
+          <a class="navbar-brand" href="#"><img src="logo (1).svg" alt="Logo"></a>
+          <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title">
+                <img src="logo (1).svg" alt="Logo" height="30">
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+            
+              <ul class="navbar-nav text-center">
+                <li class="nav-item border-bottom border-dark"><a class="nav-link" href="home.html">Home</a></li>
+                <li class="nav-item border-bottom border-dark"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item border-bottom border-dark"><a class="nav-link" href="shop.html">Shop</a></li>
+                <li class="nav-item border-bottom border-dark"><a class="nav-link" href="blog.html">Blogs</a></li>
+                <li class="nav-item border-bottom border-dark"><a class="nav-link" href="contact.html">Contact</a></li>
+             </ul>
+            
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Carousel Section -->
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <img src="bg1.jpg" class="d-block w-100" alt="Slide 1">
+          <div class="carousel-text-overlay">
+            <h1>Naturally Sweet, Purely Organic.</h1>
+          </div>
+
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <img src="bg6.jpg" class="d-block w-100" alt="Slide 2">
+          <div class="carousel-text-overlay">
+            <h1>Nature’s Basket, Your Health Companion.</h1>
+          </div>
+        </div>
+
+
+        <!-- Slide 4 -->
+        <div class="carousel-item">
+          <img src="dri.jpg" class="d-block w-100" alt="Slide 3">
+          <div class="carousel-text-overlay">
+            <h1>Sip the Purity of Nature.</h1>
+          </div>
+        </div>
+
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <img src="bg4.jpg" class="d-block w-100" alt="Slide 3">
+          <div class="carousel-text-overlay">
+            <h1>Fresh from Farm to Fork.</h1>
+          </div>
+        </div>
+
+
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+
+
+  <div class="container-fluid my-5 organic-category-section pt-5 " data-aos="fade-down">
+    <h2 class="text-center mb-4">Explore Our Organic Categories</h2>
+
+    <!-- Carousel -->
+    <div id="organicCategoryCarousel" class="carousel slide organic-category-carousel" data-bs-ride="false">
+
+      <!-- Indicators -->
+      <div class="carousel-indicators organic-carousel-indicators">
+        <button type="button" data-bs-target="#organicCategoryCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#organicCategoryCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#organicCategoryCarousel" data-bs-slide-to="2"></button>
+
+
+      </div>
+
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-center gap-4 flex-wrap">
+            <div class="organic-category-item text-center">
+              <img src="fruit.jpg" alt="Fruits">
+              <p>Fresh Fruits</p>
+            </div>
+
+
+            <div class="organic-category-item text-center">
+              <img src="snac.jpg" alt="Snacks">
+              <p>Healthy Snacks</p>
+            </div>
+
+            <div class="organic-category-item text-center">
+              <img src="images.jpg" alt="Dry Fruits">
+              <p>Dry Fruits</p>
+            </div>
+            <div class="organic-category-item text-center">
+              <img src="oil1.jpg" alt="Oils">
+              <p>Cold-Pressed Oils</p>
+            </div>
+
+
+
+
+
+            <div class="organic-category-item text-center">
+              <img src="bg6.jpg" alt="Vegetables">
+              <p>Vegetables</p>
+            </div>
+
+            <div class="organic-category-item text-center">
+              <img src="bak.jpg" alt="Oils">
+              <p>Bakery & Sweets</p>
+            </div>
+            <div class="organic-category-item text-center">
+              <img src="juice.jpg" alt="Snacks">
+              <p>Beverages</p>
+            </div>
+
+
+
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+
+        <div class="carousel-item ">
+          <div class="d-flex justify-content-center gap-4 flex-wrap">
+
+
+
+            <div class="organic-category-item text-center">
+              <img src="oil1.jpg" alt="Oils">
+              <p>Cold-Pressed Oils</p>
+            </div>
+
+            <div class="organic-category-item text-center">
+              <img src="bg6.jpg" alt="Vegetables">
+              <p>Vegetables</p>
+            </div>
+
+            <div class="organic-category-item text-center">
+              <img src="cake.jpg" alt="Oils">
+              <p>Bakery & Sweets</p>
+            </div>
+            <div class="organic-category-item text-center">
+              <img src="juice.jpg" alt="Snacks">
+              <p>Beverages</p>
+            </div>
+
+            <div class="organic-category-item text-center">
+              <img src="snacks.jpg" alt="Snacks">
+              <p>Healthy Snacks</p>
+            </div>
+
+            <div class="organic-category-item text-center">
+              <img src="fruit.jpg" alt="Fruits">
+              <p>Fresh Fruits</p>
+            </div>
+
+            <div class="organic-category-item text-center">
+              <img src="images.jpg" alt="Dry Fruits">
+              <p>Dry Fruits</p>
+            </div>
+
+
+          </div>
+        </div>
+
+
+
+
+        <div class="carousel-item ">
+          <div class="d-flex justify-content-center gap-4 flex-wrap">
+
+
+
+
+
+
+
+            <div class="organic-category-item text-center">
+              <img src="bg6.jpg" alt="Vegetables">
+              <p>Vegetables</p>
+            </div>
+
+            <div class="organic-category-item text-center">
+              <img src="images.jpg" alt="Dry Fruits">
+              <p>Dry Fruits</p>
+            </div>
+            <div class="organic-category-item text-center">
+              <img src="cake.jpg" alt="Oils">
+              <p>Bakery & Sweets</p>
+            </div>
+
+
+
+            <div class="organic-category-item text-center">
+              <img src="juice.jpg" alt="Snacks">
+              <p>Beverages</p>
+            </div>
+
+            <div class="organic-category-item text-center">
+              <img src="fruit.jpg" alt="Fruits">
+              <p>Fresh Fruits</p>
+            </div>
+
+            <div class="organic-category-item text-center">
+              <img src="oil1.jpg" alt="Oils">
+              <p>Cold-Pressed Oils</p>
+            </div>
+
+
+            <div class="organic-category-item text-center">
+              <img src="snacks.jpg" alt="Snacks">
+              <p>Healthy Snacks</p>
+            </div>
+
+
+
+
+          </div>
+        </div>
+
+
+
+      </div>
+
+      <!-- Controls -->
+
+
+    </div>
+  </div>
+
+
+  <!-- Nav-Tabs -->
+
+  <div class="container my-5 pt-5" id="organic-products" data-aos="fade-up">
+    <h2 class="text-center mb-4">Our Organic Products</h2>
+
+    <!-- Nav Tabs -->
+    <ul class="nav nav-tabs justify-content-center mb-4" id="productTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button">All
+          Products</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="fruits-tab" data-bs-toggle="tab" data-bs-target="#fruits"
+          type="button">Fruits</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="vegetables-tab" data-bs-toggle="tab" data-bs-target="#vegetables"
+          type="button">Vegetables</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="bakery-tab" data-bs-toggle="tab" data-bs-target="#bakery" type="button">Bakery
+          Products</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="oil-tab" data-bs-toggle="tab" data-bs-target="#oil" type="button"> Cold-Pressed
+          Oil</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="dryfruits-tab" data-bs-toggle="tab" data-bs-target="#dryfruits" type="button">Dry
+          Fruits</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="beverages-tab" data-bs-toggle="tab" data-bs-target="#beverages"
+          type="button">Beverages</button>
+      </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content" id="productTabsContent">
+
+      <!-- Reusable Product Card Row (6 Cards Per Tab) -->
+      <div class="tab-pane fade show active" id="all" role="tabpanel">
+        <div class="row">
+          <!-- all products -->
+          <!-- Repeat this col for all 6 products -->
+          <div class="col-md-4 col-lg-4 mb-4">
+            <div class="product-card card p-3 text-center">
+              <div class="product-img-container">
+                <img src="fr.jpg" class="card-img-top" alt="Apple">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Organic Fruits</h5>
+                <p class="card-text">Fresh and juicy apples directly from organic farms.</p>
+                <p class="price">₹300 / kg</p>
+                
+                <div class="d-flex justify-content-center gap-2">
+  <button class="btn btn-success btn-sm shadow-sm">
+    🍎 Rich in Nutrients
+  </button>
+  <button class="btn btn-primary btn-sm shadow-sm ">
+    🍀 100% Organic
+  </button>
+</div>
+                
+                
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-4 col-lg-4 mb-4">
+            <div class="product-card card p-3 text-center">
+              <div class="product-img-container">
+                <img src="bakre.jpg" class="card-img-top" alt="Apple">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Bakery & Sweets</h5>
+                <p class="card-text">Freshly baked delights crafted with organic sweeteners.</p>
+                <p class="price">₹250 / kg</p>
+                <div class="d-flex justify-content-center gap-2">
+  <button class="btn btn-success btn-sm shadow-sm">
+    🧁 Freshly Baked
+  </button>
+  <button class="btn btn-primary btn-sm shadow-sm">
+    🍯 Naturally Sweet
+  </button>
+</div>
+                
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-4 col-lg-4 mb-4">
+            <div class="product-card card p-3 text-center">
+              <div class="product-img-container">
+                <img src="vegitable.jpg" class="card-img-top" alt="Apple">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Organic Vegitables</h5>
+                <p class="card-text">Farm-fresh vegetables grown with love and care.</p>
+                <p class="price">₹150 / kg</p>
+                <div class="d-flex justify-content-center gap-2">
+  <button class="btn btn-success btn-sm shadow-sm">
+    🥦 Farm Fresh
+  </button>
+  <button class="btn btn-primary btn-sm shadow-sm">
+    🥬 Chemical-Free
+  </button>
+</div>
+                
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <div class="col-md-4 col-lg-4 mb-4">
+            <div class="product-card card p-3 text-center">
+              <div class="product-img-container">
+                <img src="drinks.jpg" class="card-img-top" alt="Apple">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Beverages</h5>
+                <p class="card-text">Refreshing organic drinks made with natural ingredients.</p>
+                <p class="price">₹180 /lit </p>
+                <div class="d-flex justify-content-center gap-2">
+  <button class="btn btn-success btn-sm shadow-sm">
+    🧃 Refreshing Taste
+  </button>
+  <button class="btn btn-primary btn-sm shadow-sm">
+    🍋 Naturally Boosted
+  </button>
+</div>
+                
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-4 col-lg-4 mb-4">
+            <div class="product-card card p-3 text-center">
+              <div class="product-img-container">
+                <img src="nut1.jpg" class="card-img-top" alt="Apple">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Nuts & Grains</h5>
+                <p class="card-text">Wholesome organic nuts packed with natural goodness.</p>
+                <p class="price">₹350 / kg</p>
+                <div class="d-flex justify-content-center gap-2">
+  <button class="btn btn-success btn-sm shadow-sm">
+    🥜 Protein Packed
+  </button>
+  <button class="btn btn-primary btn-sm shadow-sm">
+    🌾 Heart Healthy
+  </button>
+</div>
+                
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-4 col-lg-4 mb-4">
+            <div class="product-card card p-3 text-center">
+              <div class="product-img-container">
+                <img src="oil1.jpg" class="card-img-top" alt="Apple">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Cold-Pressed Oil</h5>
+                <p class="card-text">Pure cold pressed oils from organic farm seeds.</p>
+                <p class="price">₹350 / lit</p>
+                
+                <div class="d-flex justify-content-center gap-2">
+  <button class="btn btn-success btn-sm shadow-sm">
+    🛢️ Cold Extracted
+  </button>
+  <button class="btn btn-primary btn-sm shadow-sm">
+    🌻 Nutrient Rich
+  </button>
+</div>
+                
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <!-- Duplicate and change content for each product in each tab -->
+          <!-- You can repeat similar cards under different tabs below -->
+        </div>
+      </div>
+
+      <!-- Tabs with Dummy Product Cards -->
+      <div class="tab-pane fade" id="fruits" role="tabpanel">
+        <div class="row">
+          <!-- Repeat col-md-4 block with different images/content for each category -->
+
+
+          <div class="row">
+            <!-- fruits  -->
+            <!-- Repeat this col for all 6 products -->
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="realmango.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Organic Mango</h5>
+                  <p class="card-text">Fresh and juicy apples directly from organic farms.</p>
+                  <p class="price">₹120 / kg</p>
+                  
+                  <div class="d-flex justify-content-center gap-2">
+  <button class="btn btn-success btn-sm shadow-sm text-dark">
+    🏞️ Farm Fresh
+  </button>
+  <button class="btn btn-primary btn-sm shadow-sm">
+    🌿 Naturally Ripened
+  </button>
+</div>
+                  
+                  
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="papaya1.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Organic Papaya</h5>
+                  <p class="card-text">Fresh and juicy apples directly from organic farms.</p>
+                  <p class="price">₹120 / kg</p>
+                  
+                  <div class="d-flex justify-content-center gap-2">
+  <button class="btn btn-success btn-sm shadow-sm">
+    🍃 100% Organic
+  </button>
+  <button class="btn btn-primary btn-sm shadow-sm text-dark">
+    🧪 Pesticide Free
+  </button>
+</div>
+                  
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="apple.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Organic Apple</h5>
+                  <p class="card-text">Fresh and juicy apples directly from organic farms.</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-2">
+  <button class="btn btn-success btn-sm shadow-sm">
+    🍏 Farm Fresh
+  </button>
+  <button class="btn btn-primary btn-sm shadow-sm text-dark">
+    🧪 Chemical Free
+  </button>
+</div>
+                  
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="pinapple.webp" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Organic Pinapple</h5>
+                  <p class="card-text">Tropical delight with tangy taste.</p>
+                  <p class="price">₹120 / kg</p>
+                  
+                 <button class="btn btn-success btn-sm shadow-sm">
+  🍍 Naturally Grown
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  🧪 Chemical Free
+</button>
+                 
+                  
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="gava.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Organic Guava</h5>
+                  <p class="card-text">High in Vitamin C and fiber.</p>
+                  <p class="price">₹120 / kg</p>
+                  <button class="btn btn-success btn-sm shadow-sm">
+  🍈 Vitamin C Rich
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  🧪 Pesticide Free
+</button>
+                  
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src=" banana.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Organic Banana</h5>
+                  <p class="card-text">Fresh and juicy  Straberry .</p>
+                  <p class="price">₹120 / kg</p>
+                  <button class="btn btn-success btn-sm shadow-sm">
+  🍈 Vitamin C Rich
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  🧪 Pesticide Free
+</button>
+                  
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <!-- Duplicate and change content for each product in each tab -->
+            <!-- You can repeat similar cards under different tabs below -->
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="vegetables" role="tabpanel">
+        <div class="row">
+          <!-- Vegetable product cards -->
+
+          <div class="row">
+            <!-- Repeat this col for all 6 products -->
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="tomato.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Organic Tomato</h5>
+                  <p class="card-text">Fresh and juicy apples directly from organic farms.</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-3">
+                   <button class="btn btn-success btn-sm shadow-sm">
+  🌿 Fresh Aroma
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  💚 Detox Power
+</button>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="parsely.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Organic Parsely</h5>
+                  <p class="card-text">Fresh and juicy apples directly from organic farms.</p>
+                  <p class="price">₹120 / kg</p>
+                 <div class="d-flex justify-content-center gap-3">
+                 <button class="btn btn-success btn-sm shadow-sm">
+  🌿 Fresh Aroma
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  💚 Detox Power
+</button>
+
+
+                </div>
+              </div>
+            </div>
+            </div>
+            
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="potato.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Organic Potato</h5>
+                  <p class="card-text">Fresh and juicy apples directly from organic farms.</p>
+                  <p class="price">₹120 / kg</p>
+                            <div class="d-flex justify-content-center gap-3">
+                  <button class="btn btn-warning btn-sm shadow-sm">
+  🥔 Energy Rich
+</button>
+<button class="btn btn-info btn-sm shadow-sm text-dark">
+  🌱 Naturally Grown
+</button>
+
+               </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="cabbage.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Organic Cabbage</h5>
+                  <p class="card-text">Great for soups and salads.</p>
+                  <p class="price">₹120 / kg</p>
+                 <div class="d-flex justify-content-center gap-3">
+  <button class="btn btn-info btn-sm shadow-sm text-dark">
+  🥬 Fiber Loaded
+</button>
+<button class="btn btn-success btn-sm shadow-sm">
+  🛡️ Immunity Boost
+</button>
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="spinach.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Organic Spinach</h5>
+                  <p class="card-text">Iron-rich leafy green.</p>
+                  <p class="price">₹120 / kg</p>
+                            <div class="d-flex justify-content-center gap-3">
+                  <button class="btn btn-success btn-sm shadow-sm">
+                  🍃 High in Iron
+                </button>
+              <button class="btn btn-primary btn-sm shadow-sm text-dark">
+               👀 Good for Eyesight
+                 </button>
+                 </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="beetroot.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Organic Beetroot</h5>
+                  <p class="card-text">Boosts stamina and detoxifies..</p>
+                  <p class="price">₹120 / kg</p>
+                <div class="d-flex justify-content-center gap-3">
+                <button class="btn btn-danger btn-sm shadow-sm">
+  ❤️ Heart Healthy
+</button>
+<button class="btn btn-secondary btn-sm shadow-sm">
+  💧 Blood Purifier
+</button>
+
+                 </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="bakery" role="tabpanel">
+        <div class="row">
+          <!-- Bakery product cards -->
+
+          <div class="row">
+            <!-- Repeat this col for all 6 products -->
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="pestry.jpeg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Pestry</h5>
+                  <p class="card-text">Fresh and juicy apples directly from organic farms.</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-3">
+                    <button class="btn btn-success btn-sm shadow-sm">
+  🥐 Flaky Delight
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  🍯 Butter Fresh
+</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="cookie.webp" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Cookies</h5>
+                  <p class="card-text">Fresh and juicy apples directly from organic farms.</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-3">
+                   <button class="btn btn-success btn-sm shadow-sm">
+  🍪 Oven Baked
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  🍫 Choco Loaded
+</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="bread1.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Bread</h5>
+                  <p class="card-text">Fresh and juicy apples directly from organic farms.</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-3">
+                    <button class="btn btn-success btn-sm shadow-sm">
+  🍞 Daily Fresh
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  🌾 Whole Grain
+</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="cupcake.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Cupcakes</h5>
+                  <p class="card-text">Mini treats for everyone..</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-3">
+        <button class="btn btn-success btn-sm shadow-sm">
+  🧁 Cream Filled
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  🎉 Party Ready
+</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="bakre.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Bakery Sweets</h5>
+                  <p class="card-text">Perfect for every occasion.</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-3">
+                   <button class="btn btn-success btn-sm shadow-sm">
+  🧁 Cream Filled
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  🎉 Party Ready
+</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="donut.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Organic Donuts</h5>
+                  <p class="card-text">Sweet ring of joy.</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-3">
+                   <button class="btn btn-success btn-sm shadow-sm">
+  🍩 Glaze Magic
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  🍓 Jelly Filled
+</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <!-- Duplicate and change content for each product in each tab -->
+            <!-- You can repeat similar cards under different tabs below -->
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="oil" role="tabpanel">
+        <div class="row">
+          <!-- Oil product cards -->
+
+          <div class="row">
+            <!-- Repeat this col for all 6 products -->
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="oil1.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Cold-Pressed Oil</h5>
+                  <p class="card-text">Fresh and juicy apples directly from organic farms.</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-3">
+                    <button class="btn btn-success btn-sm shadow-sm">
+  🥥 Pure Extract
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  💆 Hair Nourishment
+</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="nutoil.webp" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Cold-Pressed Oil</h5>
+                  <p class="card-text">Fresh and juicy apples directly from organic farms.</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-3">
+                    <button class="btn btn-success btn-sm shadow-sm">
+  🥜 Rich Aroma
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  🍽️ Traditional Taste
+</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="coconut.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Cold-Pressed Oil</h5>
+                  <p class="card-text">Fresh and juicy apples directly from organic farms.</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-3">
+                    <button class="btn btn-success btn-sm shadow-sm">
+  🌿 Omega Rich
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  🧠 Brain Support
+</button>
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="sesame.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Sesame Oil</h5>
+                  <p class="card-text">Fresh and juicy apples directly from organic farms.</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-3">
+                    <button class="btn btn-success btn-sm shadow-sm">
+  🧴 Skin Friendly
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  🍜 Nutty Essence
+</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="sun.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Sunflower Oil</h5>
+                  <p class="card-text">Fresh and juicy apples directly from organic farms.</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-3">
+                   <button class="btn btn-success btn-sm shadow-sm">
+  🌻 Heart Friendly
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  🔥 Light Cooking
+</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="musterd.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Cold Pressed Mustard Oil</h5>
+                  <p class="card-text">Fresh and juicy apples directly from organic farms.</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-3">
+                    <button class="btn btn-success btn-sm shadow-sm">
+  🌱 Strong Flavor
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  💪 Immunity Boost
+</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <!-- Duplicate and change content for each product in each tab -->
+            <!-- You can repeat similar cards under different tabs below -->
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="dryfruits" role="tabpanel">
+        <div class="row">
+          <!-- Dry fruit product cards -->
+
+          <div class="row">
+            <!-- Repeat this col for all 6 products -->
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="almond1.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Almond</h5>
+                  <p class="card-text">Fresh and juicy apples directly from organic farms.</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-3">
+                  <button class="btn btn-success btn-sm shadow-sm">
+  🌰 Heart Healthy
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  💪 Protein Rich
+</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="cashew.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Cashew</h5>
+                  <p class="card-text">Fresh and juicy apples directly from organic farms.</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-3">
+                   <button class="btn btn-success btn-sm shadow-sm">
+  🥜 Creamy Crunch
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  ⚡ Energy Boost
+</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="raisin.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Raisins</h5>
+                  <p class="card-text">Fresh and juicy apples directly from organic farms.</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-3">
+                    <button class="btn btn-success btn-sm shadow-sm">
+  🍇 Natural Sweet
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  💧 Iron Rich
+</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="pist.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Pistachios</h5>
+                  <p class="card-text">Tasty and cholesterol free..</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-3">
+                    <button class="btn btn-success btn-sm shadow-sm">
+  💚 Good Fats
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  🔋 Energy Packed
+</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="gr.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Groundnuts</h5>
+                  <p class="card-text">Affordable protein source..</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-3">
+                   <button class="btn btn-success btn-sm shadow-sm">
+  🥜 Crunch Loaded
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  💥 Power Snack
+</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="fl.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Flax Seeds</h5>
+                  <p class="card-text">Rich in omega-3 fats..</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-3">
+                    <button class="btn btn-success btn-sm"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+                    <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <!-- Duplicate and change content for each product in each tab -->
+            <!-- You can repeat similar cards under different tabs below -->
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="beverages" role="tabpanel">
+        <div class="row">
+          <!-- Beverages product cards -->
+
+          <div class="row">
+            <!-- Repeat this col for all 6 products -->
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="j1.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Orange Juice</h5>
+                  <p class="card-text">Fresh and juicy apples directly from organic farms.</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-3">
+                   <button class="btn btn-success btn-sm shadow-sm">
+  🍊 Vitamin Packed
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  🧊 Refreshing Taste
+</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="drinks.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Cocktail</h5>
+                  <p class="card-text">Fresh and juicy apples directly from organic farms.</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-3">
+                   <button class="btn btn-success btn-sm shadow-sm">
+  🍹 Fruity Mix
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  🍒 Party Perfect
+</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="bev.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Lemon Juice</h5>
+                  <p class="card-text">Fresh and juicy apples directly from organic farms.</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-3">
+                    <button class="btn btn-success btn-sm shadow-sm">
+  🍋 Detox Drink
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  ❄️ Cool Zest
+</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="cold.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Cold Cofee </h5>
+                  <p class="card-text">Rich and energizing..</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-3">
+                    <button class="btn btn-success btn-sm shadow-sm">
+  ☕ Chilled Boost
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  🍫 Smooth Flavor
+</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="fr.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Green Tea</h5>
+                  <p class="card-text">Pure antioxidant blend.</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-3">
+                   <button class="btn btn-success btn-sm shadow-sm">
+  🍵 Fat Burner
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  🌿 Herbal Fresh
+</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-lg-4 mb-4">
+              <div class="product-card card p-3 text-center">
+                <div class="product-img-container">
+                  <img src="coconut.jpg" class="card-img-top" alt="Apple">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Coconut Water</h5>
+                  <p class="card-text">Refreshing and hydrating.</p>
+                  <p class="price">₹120 / kg</p>
+                  <div class="d-flex justify-content-center gap-3">
+                   <button class="btn btn-success btn-sm shadow-sm">
+  🍵 Fat Burner
+</button>
+<button class="btn btn-primary btn-sm shadow-sm text-dark">
+  🌿 Herbal Fresh
+</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <!-- Duplicate and change content for each product in each tab -->
+            <!-- You can repeat similar cards under different tabs below -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!--  -->
+
+
+
+
+  <!-- fourthsection -->
+
+  <div class="container
+  
+  fourthsection">
+    <div class="content" data-aos="fade-down">
+      <h1>Fresh Exotic Fruits</h1>
+      <h1>in Our Store</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, fugit?</p>
+      <button>Buy Now</button>
+      
+    </div>
+  </div>
+
+  <!--  -->
+
+
+
+  <!--Best Seller  -->
+
+  <div class="container-fluid bestseller-section">
+    <h2 class="bestseller-heading">Best Seller Products</h2>
+    <div class="container">
+      <div class="row">
+
+        <!-- Product 1 -->
+        <div class="col-md-4" data-aos="flip-up">
+          <div class="bestseller-card">
+            <img src="fruit.jpg" alt="Apple" class="product-img">
+            <div class="product-details">
+              <div class="product-title">Apple</div>
+              <div class="product-rating">★★★★☆</div>
+              <div class="product-price">Rs 120/kg</div>
+              <a href="apple.html"><button class="add-cart-btn">View Details</button></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-md-4" data-aos="flip-up">
+          <div class="bestseller-card">
+            <img src="banana.jpg" alt="Banana" class="product-img">
+            <div class="product-details">
+              <div class="product-title">Banana</div>
+              <div class="product-rating">★★★★★</div>
+              <div class="product-price">Rs 60/doz</div>
+              <a href="banana.html"><button class="add-cart-btn">View Details</button></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-md-4" data-aos="flip-up">
+          <div class="bestseller-card">
+            <img src="pineapple.webp" alt="Orange" class="product-img">
+            <div class="product-details">
+              <div class="product-title">Pineapple</div>
+              <div class="product-rating">★★★☆☆</div>
+              <div class="product-price">Rs 310/kg</div>
+              <a href="pineapple.html"><button class="add-cart-btn">View Details</button></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col-md-4" data-aos="flip-down">
+          <div class="bestseller-card">
+            <img src="papaya1.jpg" alt="Kiwi" class="product-img">
+            <div class="product-details">
+              <div class="product-title">Papaya</div>
+              <div class="product-rating">★★★★☆</div>
+              <div class="product-price">Rs 230/kg</div>
+              <a href="papaya.html"><button class="add-cart-btn">View Details</button></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="col-md-4" data-aos="flip-down">
+          <div class="bestseller-card">
+            <img src="realmango.jpg" alt="Mango" class="product-img">
+            <div class="product-details">
+              <div class="product-title">Mango</div>
+              <div class="product-rating">★★★★★</div>
+              <div class="product-price">Rs 300/kg</div>
+              <a href="mango.html"><button class="add-cart-btn">View Details</button></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="col-md-4" data-aos="flip-down">
+          <div class="bestseller-card">
+            <img src="gava.jpg" alt="Strawberry" class="product-img">
+            <div class="product-details">
+              <div class="product-title">Guava</div>
+              <div class="product-rating">★★★★☆</div>
+              <div class="product-price">Rs 150/kg</div>
+              <a href="guava.html"><button class="add-cart-btn">View Details</button></a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <!--  -->
+
+
+
+  <!-- organic vegitables -->
+
+  <section class="organic-veg-section">
+    <div class="container">
+      <h2 class="section-title">Fresh Organic Vegetables</h2>
+      <div class="row g-4">
+
+        <!-- Card 1 -->
+        <div class="col-lg-3 col-md-6 col-sm-12" data-aos="flip-left">
+          <div class="veg-card">
+            <div class="veg-img-box">
+              <img src="potato.jpg" alt="Potato">
+            </div>
+            <div class="veg-info">
+              <h5>Potato</h5>
+              <p>Rich in carbs and great for energy.</p>
+              <span class="veg-price">Rs 120/kg</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-lg-3 col-md-6 col-sm-12" data-aos="flip-left">
+          <div class="veg-card">
+            <div class="veg-img-box">
+              <img src="tomato.jpg" alt="Tomato">
+            </div>
+            <div class="veg-info">
+              <h5>Tomato</h5>
+              <p>Juicy, fresh and full of antioxidants.</p>
+              <span class="veg-price">Rs 180/kg</span>
+            </div> 
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-lg-3 col-md-6 col-sm-12" data-aos="flip-right">
+          <div class="veg-card">
+            <div class="veg-img-box">
+              <img src="parsely.jpg" alt="Parsley">
+            </div>
+            <div class="veg-info">
+              <h5>Parsley</h5>
+              <p>Fragrant herb, perfect for garnishing.</p>
+              <span class="veg-price">Rs 90/bunch</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-lg-3 col-md-6 col-sm-12" data-aos="flip-right">
+          <div class="veg-card">
+            <div class="veg-img-box">
+              <img src="cucumber.jpg" alt="Cucumber">
+            </div>
+            <div class="veg-info">
+              <h5>Cucumber</h5>
+              <p>Cool and hydrating, perfect for summer.</p>
+              <span class="veg-price">Rs 100/kg</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!--  -->
+
+
+  <!--services  -->
+
+  <div class="container-fluid my-5 services-section">
+    <h2 class="text-center mb-4">Our Services</h2>
+    <div class="row justify-content-center px-3">
+
+      <!-- Service 1 -->
+      <div class="col-md-4 col-lg-3 mb-4">
+        <div class="service-card text-center p-4">
+          <i class="bi bi-truck display-3 mb-3"></i>
+          <h5>Fast Delivery</h5>
+          <p>Quick and reliable delivery at your doorstep.</p>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="col-md-4 col-lg-3 mb-4">
+        <div class="service-card text-center p-4">
+          <i class="bi bi-shield-check display-3 mb-3"></i>
+          <h5>Quality Assured</h5>
+          <p>Top-notch products with quality guaranteed.</p>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="col-md-4 col-lg-3 mb-4">
+        <div class="service-card text-center p-4">
+          <i class="bi bi-headset display-3 mb-3"></i>
+          <h5>24/7 Support</h5>
+          <p>Always available to assist you anytime.</p>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="col-md-4 col-lg-3 mb-4">
+        <div class="service-card text-center p-4">
+          <i class="bi bi-bag-check display-3 mb-3"></i>
+          <h5>Easy Returns</h5>
+          <p>Hassle-free returns within a limited period.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!--  -->
+
+
+
+  <!-- testimonial -->
+
+  <div class="container  py-5">
+    <h2 class="text-center mb-4">What Our Clients Say</h2>
+    <p class="text-center">Meet Our Amazing Customers & Their Stories.</p>
+    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+      <div class="carousel-indicators ">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+
+      <div class="carousel-inner">
+
+
+
+        <div class="carousel-item active" data-bs-interval="10000">
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up">
+              <div class="trainer-card">
+                <img src="t1.jpg" alt="John Doe">
+
+                <h4>John Doe</h4>
+                <h6>I love the variety of chemical-free fruits and veggies available here.</h6>
+                <p>Fitness Coach</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-down">
+              <div class="trainer-card">
+                <img src="t2.jpg" alt="Michael Smith">
+
+                <h4>Michael Smith</h4>
+                <h6>The packaging is eco-friendly and always neat—appreciate the effort!</h6>
+                <p>Yoga Instructor</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up">
+              <div class="trainer-card">
+                <img src="t3.jpg" alt="David Johnson">
+
+                <h4>David Johnson</h4>
+                <h6>Timely delivery and excellent customer service every time I order.</h6>
+                <p>Personal Trainer</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-down">
+              <div class="trainer-card">
+                <img src="t4.jpg" alt="Robert Lee">
+
+                <h4>Robert Lee</h4>
+                <h6>The prices are reasonable for such high-quality organic products.</h6>
+                <p>Nutrition Expert</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="carousel-item" data-bs-interval="2000">
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up">
+              <div class="trainer-card">
+                <img src="t3.jpg" alt="John Doe">
+
+                <h4>John Doe</h4>
+                <h6>The website is user-friendly and makes shopping super easy.</h6>
+                <p>Fitness Coach</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-down">
+              <div class="trainer-card">
+                <img src="t4.jpg" alt="Michael Smith">
+
+                <h4>Michael Smith</h4>
+                <h6>I’ve noticed a real difference in taste and quality since switching to this store.</h6>
+                <p>Yoga Instructor</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up">
+              <div class="trainer-card">
+                <img src="t1.jpg" alt="David Johnson">
+
+                <h4>David Johnson</h4>
+                <h6>Great selection of gluten-free and vegan options—perfect for my diet!</h6>
+                <p>Personal Trainer</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-down">
+              <div class="trainer-card">
+                <img src="t2.jpg" alt="Robert Lee">
+
+                <h4>Robert Lee</h4>
+                <h6>I always receive fresh items, and the return process (if needed) is hassle-free.</h6>
+                <p>Nutrition Expert</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up">
+              <div class="trainer-card">
+                <img src="t4.jpg" alt="John Doe">
+
+                <h4>John Doe</h4>
+                <h6>Customer support is responsive and always resolves my queries quickly.</h6>
+                <p>Fitness Coach</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-down">
+              <div class="trainer-card">
+                <img src="t1.jpg" alt="Michael Smith">
+
+                <h4>Michael Smith</h4>
+                <h6>Love supporting a business that promotes healthy and sustainable living.</h6>
+                <p>Yoga Instructor</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up">
+              <div class="trainer-card">
+                <img src="t2.jpg" alt="David Johnson">
+
+                <h4>David Johnson</h4>
+                <h6>The detailed product descriptions help me make informed choices every time.</h6>
+                <p>Personal Trainer</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-down">
+              <div class="trainer-card">
+                <img src="t3.jpg" alt="Robert Lee">
+
+                <h4>Robert Lee</h4>
+                <h6>Fresh and organic produce delivered right to my doorstep super convenient!</h6>
+                <p>Nutrition Expert</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!--  -->
+
+
+  <!-- download section -->
+  <section class="organic-app-section container">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+
+        <!-- Left Side -->
+        <div class="col-md-6">
+          <div class="organic-text-box" data-aos="fade-down">
+            <h2>Download Organic App</h2>
+            <p>Stay healthy, shop fresh – Anytime, Anywhere.</p>
+            <div class="store-buttons">
+              <a href="#"><img src="img-app-store.png" class="mb" alt="App Store"></a>
+              <a href="#"><img src="img-google-play.png" alt="Play Store"></a>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="col-md-6 text-center">
+          <!-- <img src="//banner-onlineapp.png" alt="App Promo" class="img-fluid big-img"> -->
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!--  -->
+
+
+
+  <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
+    <div class="container py-5" data-aos="fade-up" data-aos-duration="3000">
+      <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(226, 175, 24, 0.5) ;">
+        <div class="row g-4">
+          <div class="col-lg-3">
+            <a href="#">
+              <a class="navbar-brand" href="#"><img src="logo (1).svg" alt="Logo"></a>
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <div class="position-relative mx-auto">
+              <input class="form-control border-0 w-100 py-3 px-4 rounded-pill" type="number" placeholder="Your Email">
+              <button type="submit"
+                class="btn btn-primary border-0 border-secondary py-3 px-4 position-absolute rounded-pill text-white"
+                style="top: 0; right: 0;">Subscribe Now</button>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="d-flex justify-content-end pt-3">
+              <a class="btn  btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i
+                  class="fab fa-twitter"></i></a>
+              <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i
+                  class="fab fa-facebook-f"></i></a>
+              <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i
+                  class="fab fa-youtube"></i></a>
+              <a class="btn btn-outline-secondary btn-md-square rounded-circle" href=""><i
+                  class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-item">
+            <h4 class="text-light mb-3">Why People Like us!</h4>
+            <p class="mb-4">
+
+We offers fresh, chemical-free products with quality, purity, and care—supporting healthy living, eco-friendly choices, and transparency that builds trust and promotes sustainability naturally.
+            
+            </p>
+            <a href="" class="btn border-secondary py-2 px-4 rounded-pill text-primary">Read More</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="d-flex flex-column text-start footer-item">
+            <h4 class="text-light mb-3">Shop Info</h4>
+            <a class="btn-link" href="">About Us</a>
+            <a class="btn-link" href="">Contact Us</a>
+            <a class="btn-link" href="">Privacy Policy</a>
+            <a class="btn-link" href="">Terms & Condition</a>
+            <a class="btn-link" href="">Return Policy</a>
+            <a class="btn-link" href="">FAQs & Help</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="d-flex flex-column text-start footer-item">
+            <h4 class="text-light mb-3">Account</h4>
+            <a class="btn-link" href="">My Account</a>
+            <a class="btn-link" href="">Shop details</a>
+            <a class="btn-link" href="">Shopping Cart</a>
+            <a class="btn-link" href="">Wishlist</a>
+            <a class="btn-link" href="">Order History</a>
+            <a class="btn-link" href="">International Orders</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-item">
+            <h4 class="text-light mb-3">Contact</h4>
+            <p>Address: 1429 Ravi Nagar, Amaravati 48247</p>
+            <p>Email: Example@gmail.com</p>
+            <p>Phone: +0123 4567 8910</p>
+            <p>Payment Accepted</p>
+            <img src="payment.png" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer End -->
+
+  <!-- Copyright Start -->
+  <div class="container-fluid copyright bg-dark py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <span class="text-light"><a href="index.html"><i class="fas fa-copyright text-light me-2"></i>2025</a>, All
+            right reserved.</span>
+        </div>
+        <div class="col-md-6 my-auto text-center text-md-end text-white">
+          <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+          <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+          <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+          Designed By <a class="border-bottom" href="index.html">Aditya</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Copyright End -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init(
+
+      {
+
+        duration: 2000
+      }
+
+
+    );
+    
+    
+  </script>
+  
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	  const userDropdownToggle = document.getElementById("userDropdownToggle");
+	  const userDropdownMenu = document.getElementById("userDropdownMenu");
+	  const userNameDisplay = document.getElementById("user-name");
+	  const logoutBtn = document.getElementById("logout-btn");
+	  const clickHint = document.getElementById("clickHint");
+
+	  const username = sessionStorage.getItem("username");
+
+	  if (username) {
+	    userNameDisplay.textContent = username;
+	  } else {
+	    userDropdownMenu.innerHTML = '<li class="dropdown-item text-muted">Not logged in</li>';
+	  }
+
+	  userDropdownToggle.addEventListener("click", function () {
+	    const isOpen = userDropdownMenu.style.display === "block";
+	    userDropdownMenu.style.display = isOpen ? "none" : "block";
+	    clickHint.style.display = isOpen ? "block" : "none";
+	  });
+
+	  logoutBtn?.addEventListener("click", function () {
+	    alert("Logging off...");
+	    sessionStorage.removeItem("username");
+	    window.location.replace("index.html");
+	  });
+
+	  document.addEventListener("click", function (e) {
+	    if (!userDropdownToggle.contains(e.target) && !userDropdownMenu.contains(e.target)) {
+	      userDropdownMenu.style.display = "none";
+	      clickHint.style.display = "block";
+	    }
+	  });
+	});
+
+</script>
+
+  
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Homemade Butter Cookies</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+    
+    body {
+      background: #f4f9f4;
+      color: #333;
+    }
+    
+    .product-page {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      margin-bottom: 40px;
+    }
+    
+    .product-image {
+      flex: 1 1 45%;
+      text-align: center;
+    }
+    
+    .product-image img {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .product-image img:hover {
+      transform: scale(1.05);
+    }
+    
+    .product-details {
+      flex: 1 1 50%;
+    }
+    
+    .product-details h1 {
+      font-size: 2rem;
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+    
+    .tagline {
+      font-style: italic;
+      color: #666;
+      margin: 10px 0 20px;
+    }
+    
+    .description {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    
+    .info-list {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+    
+    .info-list li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+    
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    
+    .buy-now,
+    .add-cart {
+      background: #43a047;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    
+    .buy-now:hover,
+    .add-cart:hover {
+      background: #2e7d32;
+    }
+    
+    .back-btn {
+      text-decoration: none;
+      background: #eee;
+      color: #333;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+    
+    .back-btn:hover {
+      background: #ccc;
+    }
+    
+    .quality-check {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+    
+    .quality-check h2 {
+      margin-bottom: 20px;
+      color: #2e7d32;
+      font-size: 1.8rem;
+    }
+    
+    .quality-check table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1rem;
+    }
+    
+    .quality-check th,
+    .quality-check td {
+      border: 1px solid #ddd;
+      padding: 12px 15px;
+      text-align: left;
+    }
+    
+    .quality-check th {
+      background-color: #e8f5e9;
+      color: #2e7d32;
+    }
+    
+    .quality-check td {
+      background-color: #fafafa;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+    
+      .product-image img {
+        max-width: 100%;
+      }
+    
+      .product-details {
+        padding-top: 20px;
+      }
+    
+      .buttons {
+        justify-content: center;
+      }
+    }
+    
+      </style>
+</head>
+<body>
+  <section class="product-page">
+    <div class="container">
+      <div class="product-image">
+        <img src="/assets/Images/Home/cookie.webp" alt="Homemade Cookies" />
+      </div>
+      <div class="product-details">
+        <h1>Homemade Butter Cookies</h1>
+        <p class="tagline">Crispy, Buttery & Freshly Baked</p>
+        <p class="description">
+          Enjoy our homemade butter cookies, baked using traditional recipes with pure ingredients. Perfect for your tea time or as a delightful gift, these cookies are free from preservatives and artificial flavors.
+        </p>
+        <ul class="info-list">
+          <li><strong>Price:</strong> ₹120 / 250g pack</li>
+          <li><strong>Flavor:</strong> Classic Butter</li>
+          <li><strong>Shelf Life:</strong> 15 Days</li>
+          <li><strong>Packaging:</strong> Reusable airtight jar</li>
+        </ul>
+        <div class="buttons">
+          <button class="buy-now">Buy Now</button>
+          <button class="add-cart">Add to Cart</button>
+          <a href="shop.html" class="back-btn">← Back to Shop</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="quality-check">
+      <h2>Quality Checks</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>No Preservatives</td>
+            <td>✔ Confirmed</td>
+          </tr>
+          <tr>
+            <td>Homemade Process</td>
+            <td>✔ Yes</td>
+          </tr>
+          <tr>
+            <td>Quality Butter Used</td>
+            <td>✔ Verified</td>
+          </tr>
+          <tr>
+            <td>Hygiene Checked</td>
+            <td>✔ Regular Kitchen Audit</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</body>
+</html>
