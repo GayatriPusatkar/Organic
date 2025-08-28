@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ecommerce Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+ <link rel="stylesheet" href="demo.css">
+ 
+ 
+ 
+ 
+
+
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Aos -->
+
+
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!--  -->
+
+
+
+<style>
+ /* download */
+
+ .organic-app-section {
+  
+  padding: 60px 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 80vh;
+  padding: 20px;
+  background-image: url(bg2.jpg); /* Replace with your image URL */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+
+}
+
+.shopbreadcrumb-section {
+  background: url('bg5.jpg') no-repeat center center/cover;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+</style>
+</head>
+
+<body>
+  <div class="container-fluid firstparent">
+    <div class="container-fluid first">
+      <!-- Desktop Navbar -->
+      <nav class="navbar navbar-expand-lg d-lg-block d-none bg-white shadow-sm fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#"><img src="logo (1).svg" alt="Logo"></a>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto gap-4">
+              <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+              <li class="nav-item"><a class="nav-link" href="blog.html">Blogs</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="dropdown position-relative">
+  <i class="fas fa-user fa-lg fs-2 me-3" id="userDropdownToggle" style="cursor: pointer;"></i>
+  <ul class="dropdown-menu show-on-click" id="userDropdownMenu" style="display:none; position:absolute; top: 40px; left: -50px; background:white; border:1px solid #ccc; border-radius:8px; min-width:160px; z-index:1000;">
+    <li><span id="user-name" class="dropdown-item text-primary fw-bold text-center"></span></li>
+    <li><a class="dropdown-item" href="cart.html"><i class="fa-solid fa-cart-shopping me-2"></i>Go to Cart</a></li>
+    <li><a class="dropdown-item text-danger" href="#" id="logout-btn"><i class="fa-solid fa-right-from-bracket me-2"></i>Logout</a></li>
+  </ul>
+</div>
+        </div>
+      </nav>
+  
+      <!-- Mobile Navbar -->
+      <nav class="navbar mobile-navbar fixed-top d-lg-none d-block bg-white shadow-sm">
+        <div class="container">
+          <a class="navbar-brand" href="#"><img src="logo (1).svg" alt="Logo"></a>
+          <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title">
+                <img src="logo (1).svg" alt="Logo" height="30">
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav text-center">
+                <li class="nav-item border-bottom border-dark"><a class="nav-link" href="home.html">Home</a></li>
+                <li class="nav-item border-bottom border-dark"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item border-bottom border-dark"><a class="nav-link" href="shop.html">Shop</a></li>
+                <li class="nav-item border-bottom border-dark"><a class="nav-link" href="blog.html">Blogs</a></li>
+                <li class="nav-item border-bottom border-dark"><a class="nav-link" href="contact.html">Contact</a></li>
+             </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  
+    
+    
+  </div>
+
+  
+
+
+
+
+  <div class="container-fluid shopbreadcrumb-section">
+    <nav class="breadcrumb-nav text-center" >
+        <h1>Shop</h1>
+      <a href="#">Home</a> / <a href="#">Shop</a>
+    </nav>
+  </div>
+
+  <!-- Main Layout -->
+  <div class="container-fluid py-5">
+    <div class="row">
+      <!-- LEFT COLUMN (Filters + Featured + Banner) -->
+      <div class="col-lg-3 col-md-4">
+        <div class="filter-section">
+          <h3 class="mb-3">Filters</h3>
+
+          <!-- Search -->
+          <div class="mb-3">
+            <input type="text" id="searchInput" class="form-control search-input" placeholder="Search product...">
+          </div>
+
+          <!-- Categories -->
+          <h4>Categories</h4>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="fruit" data-category="fruit">
+            <label class="form-check-label" for="fruits">Fruit</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="vegetable" data-category="vegetable">
+            <label class="form-check-label" for="vegetables">Vegetable</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="coldpress" data-category="oil">
+            <label class="form-check-label" for="coldpress">Cold Press Oil</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="fruit" data-category="bakery">
+            <label class="form-check-label" for="fruits">Bakery Product</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="vegetable" data-category="nuts">
+            <label class="form-check-label" for="vegetables">Dry Fruits</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="coldpress" data-category="beverages">
+            <label class="form-check-label" for="coldpress">Bavrages</label>
+          </div>
+
+
+
+          <!-- Price -->
+          <h4 class="mt-4">Price Range</h4>
+          <input type="range" class="form-range" min="0" max="500" id="priceRange">
+          <div class="d-flex justify-content-between"><span>₹0</span><span>₹500</span></div>
+
+          <!-- Featured Products -->
+          <h4 class="mt-4">Featured</h4>
+          <div class="featured-product ">
+            <img src="fruit.jpg" alt="Apple">
+            <div>
+              <strong>Fresh Apple</strong><br>
+              <div class="product-rating">★★★★★</div>
+              <span class="text-muted">$2.99</span>
+            </div>
+          </div>
+          <div class="featured-product">
+            <img src="images.jpg" alt="Almond">
+            <div>
+              <strong>Dryfruits</strong><br>
+              <div class="product-rating">★★★★☆</div>
+              <span class="text-muted">$5.49</span>
+            </div>
+          </div>
+          <div class="featured-product">
+            <img src="juice.jpg" alt="Beverages">
+            <div>
+              <strong>Beverages</strong><br>
+              <div class="product-rating">★★★★☆</div>
+              <span class="text-muted">$5.49</span>
+            </div>
+          </div>
+
+          <!-- Banner -->
+          
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN (Product Grid) -->
+      <div class="col-lg-9 col-md-8">
+        <div class="row" id="product-list">
+          <!-- Products will be injected here by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- download -->
+
+<section class="organic-app-section container">
+    <div class="container">
+      <div class="row align-items-center">
+        
+        <!-- Left Side -->
+        <div class="col-md-6">
+          <div class="organic-text-box" >
+            <h2>Download Organic App</h2>
+            <p>Stay healthy, shop fresh – Anytime, Anywhere.</p>
+            <div class="store-buttons">
+              <a href="#"><img src="img-app-store.png" class="mb" alt="App Store"></a>
+              <a href="#"><img src="img-google-play.png" alt="Play Store"></a>
+              
+            </div>
+          </div>
+        </div>
+  
+        <!-- Right Side -->
+        <div class="col-md-6 text-center">
+          <!-- <img src="/assets/Images/Home/banner-onlineapp.png" alt="App Promo" class="img-fluid big-img"> -->
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+
+
+  
+  <!--  -->
+
+  <!-- Footer -->
+
+
+  <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
+    <div class="container py-5">
+        <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(226, 175, 24, 0.5) ;">
+            <div class="row g-4">
+                <div class="col-lg-3">
+                    <a href="#">
+                      <a class="navbar-brand" href="#"><img src="logo (1).svg" alt="Logo"></a>
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="position-relative mx-auto">
+                        <input class="form-control border-0 w-100 py-3 px-4 rounded-pill" type="number" placeholder="Your Email">
+                        <button type="submit" class="btn btn-primary border-0 border-secondary py-3 px-4 position-absolute rounded-pill text-white" style="top: 0; right: 0;">Subscribe Now</button>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="d-flex justify-content-end pt-3">
+                        <a class="btn  btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-secondary btn-md-square rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="text-light mb-3">Why People Like us!</h4>
+                    <p class="mb-4">typesetting, remaining essentially unchanged. It was 
+                        popularised in the 1960s with the like Aldus PageMaker including of Lorem Ipsum.</p>
+                    <a href="" class="btn border-secondary py-2 px-4 rounded-pill text-primary">Read More</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="d-flex flex-column text-start footer-item">
+                    <h4 class="text-light mb-3">Shop Info</h4>
+                    <a class="btn-link" href="">About Us</a>
+                    <a class="btn-link" href="">Contact Us</a>
+                    <a class="btn-link" href="">Privacy Policy</a>
+                    <a class="btn-link" href="">Terms & Condition</a>
+                    <a class="btn-link" href="">Return Policy</a>
+                    <a class="btn-link" href="">FAQs & Help</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="d-flex flex-column text-start footer-item">
+                    <h4 class="text-light mb-3">Account</h4>
+                    <a class="btn-link" href="">My Account</a>
+                    <a class="btn-link" href="">Shop details</a>
+                    <a class="btn-link" href="">Shopping Cart</a>
+                    <a class="btn-link" href="">Wishlist</a>
+                    <a class="btn-link" href="">Order History</a>
+                    <a class="btn-link" href="">International Orders</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="text-light mb-3">Contact</h4>
+                    <p>Address: 1429 Netus Rd, NY 48247</p>
+                    <p>Email: Example@gmail.com</p>
+                    <p>Phone: +0123 4567 8910</p>
+                    <p>Payment Accepted</p>
+                    <img src="payment.png" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid copyright bg-dark py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                <span class="text-light"><a href="index.html"><i class="fas fa-copyright text-light me-2"></i>2025</a>, All right reserved.</span>
+            </div>
+            <div class="col-md-6 my-auto text-center text-md-end text-white">
+                <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                Designed By <a class="border-bottom" href="index.html">Aditya</a>
+            </div>
+        </div>
+    </div>
+</div>
+  <!-- -- -->
+
+  <!-- JS -->
+  <script>
+    const products = [
+      // Fruits
+      { name: "Organic Apple", price: 120, category: "fruit", features: ["organic", "fresh"], image: "apple.jpg", page: "#", desc: "Fresh and juicy apples ",link:"apple.html" },
+      { name: "Organic Mango", price: 300, category: "fruit", features: ["organic", "fresh"], image: "realmango.jpg", page: "#", desc: "Sweet mangoes grown naturally." ,link:"mango.html" },
+      { name: "Banana", price: 60, category: "fruit", features: ["fresh"], image: "banana.jpg", page: "#", desc: "Rich in potassium and energy.",link:"banana.html" },
+      { name: "Papaya", price: 230, category: "fruit", features: ["organic"], image: "papaya1.jpg", page: "#", desc: "Great for digestion and skin.",link:"papaya.html" },
+      { name: "Pineapple", price: 310, category: "fruit", features: ["fresh"], image: "pineapple.webp", page: "#", desc: "Tropical delight with tangy taste." },
+      { name: "Guava", price: 150, category: "fruit", features: ["organic"], image: "gava.jpg", page: "#", desc: "High in Vitamin C and fiber." },
+
+      // Vegetables
+      { name: "Tomato", price: 40, category: "vegetable", features: ["fresh"], image: "tomato.jpg", page: "#", desc: "Juicy and perfect for cooking." },
+      { name: "Organic Carrot", price: 120, category: "vegetable", features: ["organic"], image: "carrot1.jpg", page: "#", desc: " rich in beta-carotene." },
+      { name: "Potato", price: 200, category: "vegetable", features: [], image: "potato.jpg", page: "#", desc: "Versatile and starchy favorite." },
+      
+      { name: "Cabbage", price: 85, category: "vegetable", features: ["fresh"], image: "cabbage.jpg", page: "#", desc: "Great for soups and salads." },
+      { name: "Beetroot", price: 320, category: "vegetable", features: ["organic"], image: "beetroot.jpg", page: "#", desc: "Boosts stamina and detoxifies." },
+     
+      { name: "Spinach", price: 160, category: "vegetable", features: ["organic", "fresh"], image: "spinach.jpg", page: "#", desc: "Iron-rich leafy green." },
+
+      
+      
+      // Nuts
+      { name: "Almonds", price: 95, category: "nuts", features: ["organic"], image: "almond1.jpg", page: "#", desc: "Perfect snack for healthy living." },
+      { name: "Cashews", price: 250, category: "nuts", features: [], image: "cashew.jpg", page: "#", desc: "Creamy and protein-rich nuts." },
+      { name: "Raisins", price: 350, category: "nuts", features: ["organic"], image: "raisin.jpg", page: "#", desc: "Supports brain health." },
+      { name: "Pistachios", price: 280, category: "nuts", features: ["fresh"], image: "pist.jpg", page: "#", desc: "Tasty and cholesterol free." },
+      { name: "Groundnuts", price: 80, category: "nuts", features: [], image: "gr.jpg", page: "#", desc: "Affordable protein source." },
+      { name: "Flax Seeds", price: 180, category: "nuts", features: ["organic"], image: "fl.jpg", page: "#", desc: "Rich in omega-3 fats." },
+
+      // Bakery
+      { name: "Organic Buns", price: 90, category: "bakery", features: ["organic", "fresh"], image: "bread1.jpg", page: "#", desc: "Soft and delicious." },
+      { name: "Bakery Sweets", price: 220, category: "bakery", features: ["fresh"], image: "bakre.jpg", page: "#", desc: "Perfect for every occasion." },
+      { name: "Brown Bread", price: 60, category: "bakery", features: ["fresh"], image: "brownb.png", page: "#", desc: "Fiber-rich and soft." },
+      { name: "Pestry", price: 340, category: "bakery", features: [], image: "pestry.jpeg", page: "#", desc: "Baked fresh daily." },
+      { name: "Cupcakes", price: 100, category: "bakery", features: ["fresh"], image: "cupcake.jpg", page: "#", desc: "Mini treats for everyone." },
+      { name: "Organic Donuts", price: 290, category: "bakery", features: ["organic"], image: "donut.jpg", page: "#", desc: "Sweet ring of joy." },
+
+      // Oil
+      { name: "Cold Pressed Coconut Oil", price: 90, category: "oil", features: ["organic"], image: "coconut.jpg", page: "#", desc: "Pure and aromatic." },
+      { name: "Cold Pressed Mustard Oil", price: 260, category: "oil", features: [], image: "musterd.jpg", page: "#", desc: "Traditional Indian flavor." },
+      { name: "Sesame Oil", price: 290, category: "oil", features: ["organic"], image: "sesame.jpg", page: "#", desc: "Great for heart health." },
+      { name: "Groundnut Oil", price: 350, category: "oil", features: [], image: "nutoil.webp", page: "#", desc: "Neutral and mild taste." },
+      { name: "Sunflower Oil", price: 180, category: "oil", features: ["fresh"], image: "sun.jpg", page: "#", desc: "Light and nutritious." },
+      { name: "Olive Oil", price: 390, category: "oil", features: ["organic"], image: "oil1.jpg", page: "#", desc: "Mediterranean goodness." },
+
+      
+// bavrages
+{ name: "Amla Juice", price: 110, category: "beverages", features: ["fresh"], image: "amla.jpg", page: "#", desc: "Vitamin C rich immunity booster." },
+{ name: "Coconut Water", price: 60, category: "beverages", features: [], image: "cocojuice.jpg", page: "#", desc: "Refreshing and hydrating." },
+{ name: "Cold Coffee", price: 130, category: "beverages", features: [], image: "cold.jpg", page: "#", desc: "Rich and energizing." },
+{ name: "Green Tea", price: 95, category: "beverages", features: ["organic"], image: "gtea.jpg", page: "#", desc: "Pure antioxidant blend." },
+{ name: "Lemon Ginger Detox", price: 145, category: "beverages", features: ["organic"], image: "bev.jpg", page: "#", desc: "Zesty and cleansing." },
+{ name: "Herbal Infusion", price: 180, category: "beverages", features: ["fresh"], image: "drinks.jpg", page: "#", desc: "Soothe your senses." },
+
+      
+    ];
+    
+  
+    function displayProducts(filteredProducts) {
+      const productList = document.getElementById('product-list');
+      productList.innerHTML = '';
+      filteredProducts.forEach(product => {
+        const productLink = product.link || product.page || "#";
+        const card = `
+          <div class="col-md-4 col-lg-4 mb-4">
+            <div class="product-card card p-3 text-center">
+              <div class="product-img-container">
+                <img src="${product.image}" class="card-img-top" alt="${product.name}">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">${product.name}</h5>
+                <p class="price">₹${product.price} / kg</p>
+                <p class="product-desc">${product.desc}</p>
+                <a href="${productLink}" class="btn btn-success btn-sm">View Product</a>
+              </div>
+            </div>
+          </div>`;
+        productList.innerHTML += card;
+      });
+    }
+  
+    function filterProducts() {
+      let result = products;
+      const search = document.getElementById('searchInput').value.toLowerCase();
+      if (search) {
+        result = result.filter(p => p.name.toLowerCase().includes(search));
+      }
+      const selected = Array.from(document.querySelectorAll('.form-check-input:checked')).map(cb => cb.dataset.category);
+      if (selected.length) {
+        result = result.filter(p => selected.includes(p.category));
+      }
+      const maxPrice = document.getElementById('priceRange').value;
+      result = result.filter(p => p.price <= maxPrice);
+      displayProducts(result);
+    }
+  
+    document.querySelectorAll('.form-check-input').forEach(cb => cb.addEventListener('change', filterProducts));
+    document.getElementById('searchInput').addEventListener('input', filterProducts);
+    document.getElementById('priceRange').addEventListener('input', filterProducts);
+  
+    displayProducts(products);
+
+  
+  </script>
+  
+  <script>
+    AOS.init(
+      {
+              
+              duration: 100  
+          }
+
+    );
+  </script>
+  
+  
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const userIcon = document.getElementById("user-icon");
+    const userDropdown = document.getElementById("user-dropdown");
+    const userNameDisplay = document.getElementById("user-name");
+    const username = sessionStorage.getItem("username");
+
+    if (username) {
+      userNameDisplay.textContent = username;
+      userDropdown.style.display = "block";
+    } else {
+      userDropdown.style.display = "none";
+    }
+
+    userIcon.addEventListener("click", () => {
+      document.getElementById("dropdown-menu").classList.toggle("show");
+    });
+
+    document.getElementById("logout-btn").addEventListener("click", () => {
+      sessionStorage.removeItem("username");
+      window.location.href = "login.html";
+    });
+  });
+</script>
+  
+  
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const userIcon = document.getElementById("user-icon");
+    const userDropdown = document.getElementById("user-dropdown");
+    const userNameDisplay = document.getElementById("user-name");
+    const username = sessionStorage.getItem("username");
+
+    if (username) {
+      userNameDisplay.textContent = username;
+      userDropdown.style.display = "block";
+    } else {
+      userDropdown.style.display = "none";
+    }
+
+    userIcon.addEventListener("click", () => {
+      document.getElementById("dropdown-menu").classList.toggle("show");
+    });
+
+    document.getElementById("logout-btn").addEventListener("click", () => {
+      alert("Logging off...");
+      sessionStorage.removeItem("username");
+      window.location.href = "index.html";
+    });
+  });
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const userDropdownToggle = document.getElementById("userDropdownToggle");
+    const userDropdownMenu = document.getElementById("userDropdownMenu");
+    const userNameDisplay = document.getElementById("user-name");
+    const logoutBtn = document.getElementById("logout-btn");
+
+    const username = sessionStorage.getItem("username");
+
+    if (username) {
+      userNameDisplay.textContent = username;
+    } else {
+      userDropdownMenu.innerHTML = '<li class="dropdown-item text-muted">Not logged in</li>';
+    }
+
+    userDropdownToggle.addEventListener("click", function () {
+      userDropdownMenu.style.display = userDropdownMenu.style.display === "block" ? "none" : "block";
+    });
+
+    logoutBtn?.addEventListener("click", function () {
+      alert("Logging off...");
+      sessionStorage.removeItem("username");
+      window.location.href = "index.html";
+    });
+
+    // Close dropdown if clicked outside
+    document.addEventListener("click", function (e) {
+      if (!userDropdownToggle.contains(e.target) && !userDropdownMenu.contains(e.target)) {
+        userDropdownMenu.style.display = "none";
+      }
+    });
+  });
+</script>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

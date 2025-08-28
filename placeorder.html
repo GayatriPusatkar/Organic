@@ -1,0 +1,150 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Place Order</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    .order-box {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .product-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .shadow-input {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .user-icon-container {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .user-icon-container i {
+      color: #333;
+    }
+
+    .user-icon-container h6 {
+      margin-top: 5px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    @media (max-width: 576px) {
+      .user-icon-container {
+        position: static;
+        margin-bottom: 15px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .user-icon-container h6 {
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 order-box">
+        
+       <div class="text-center mb-4">
+      <i class="fa fa-user fa-2x"></i>
+      <div id="username" style="margin-top: 5px; font-weight: bold;"></div>
+    </div>
+        
+
+        <h2 class="text-center mb-4">🛒 Order Summary</h2>
+
+        <div class="row align-items-center mb-4">
+          <div class="col-md-5">
+            <img id="productImage" src="" alt="Product Image" class="product-img" />
+          </div>
+          <div class="col-md-7">
+            <ul class="list-group">
+              <li class="list-group-item"><strong>Product:</strong> <span id="pname"></span></li>
+              <li class="list-group-item"><strong>Price per Kg:</strong> ₹<span id="pprice"></span></li>
+              <li class="list-group-item">
+                <strong>Quantity (Kg):</strong>
+                <input type="number" id="pqty" class="form-control d-inline-block w-50 ms-2 shadow-input" min="1" value="1" required />
+              </li>
+              <li class="list-group-item"><strong>Total:</strong> ₹<span id="ptotal"></span></li>
+              <li class="list-group-item text-success"><strong>Payment Mode:</strong> Cash on Delivery 💵</li>
+            </ul>
+          </div>
+        </div>
+
+        <h4 class="mb-3">📦 Delivery Information</h4>
+        <form id="orderForm">
+          <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control shadow-input" required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Address</label>
+            <textarea class="form-control shadow-input" rows="3" required></textarea>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" class="form-control shadow-input" required />
+          </div>
+          <button type="submit" class="btn btn-success w-100">✅ Place Order</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    // Session username display
+    const sessionUsername = sessionStorage.getItem("username") || "User";
+    document.getElementById("username").textContent = sessionUsername;
+
+    // Order product from localStorage
+    const product = JSON.parse(localStorage.getItem("order"));
+    const price = product.price;
+    const qtyInput = document.getElementById("pqty");
+    const totalSpan = document.getElementById("ptotal");
+
+    document.getElementById("pname").textContent = product.name;
+    document.getElementById("pprice").textContent = price;
+    document.getElementById("productImage").src = product.image || "https://via.placeholder.com/300x200?text=Product";
+
+    function updateTotal() {
+      const qty = parseFloat(qtyInput.value);
+      const total = qty * price;
+      totalSpan.textContent = total.toFixed(2);
+    }
+
+    updateTotal();
+    qtyInput.addEventListener("input", updateTotal);
+
+    document.getElementById("orderForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("🎉 Thank you! Your order has been placed successfully. 🛵\n\n🚚 Product will be delivered to your doorstep in half an hour ⏳\n\n💵 Payment: Cash on Delivery");
+      
+      localStorage.removeItem("order");
+      window.location.href = "shop.html";
+    });
+  </script>
+
+</body>
+</html>
